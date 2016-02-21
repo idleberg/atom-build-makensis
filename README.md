@@ -20,6 +20,11 @@
 1. Change directory `cd ~/.atom/packages/`
 2. Clone repository `git clone https://github.com/idleberg/atom-build-makensis build-makensis`
 
+## Usage
+
+* <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>b</kbd> / <kbd>F9</kbd> - builds script
+* <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>v</kbd> / <kbd>F8</kbd> - toggles the build panel
+
 ## License
 
 This work is licensed under the [The MIT License](LICENSE.md).
