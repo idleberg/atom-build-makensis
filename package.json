@@ -1,6 +1,6 @@
 {
   "name": "build-makensis",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "AtomBuild provider for makensis, compiles NSIS",
   "repository": "https://github.com/idleberg/atom-build-makensis",
   "license": "MIT",
