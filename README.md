@@ -22,8 +22,13 @@
 
 ## Usage
 
-* <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>b</kbd> / <kbd>F9</kbd> - builds script
-* <kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>v</kbd> / <kbd>F8</kbd> - toggles the build panel
+### Build
+
+**Build script**  
+<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>b</kbd> or <kbd>F9</kbd>
+
+**Toggle build panel**  
+<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>v</kbd> / <kbd>F8</kbd>
 
 ## License
 
