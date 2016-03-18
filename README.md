@@ -7,7 +7,7 @@
 
 # build-makensis
 
-[AtomBuild](https://atombuild.github.io/) provider for makensis, compiles NSIS
+[Atom Build](https://atombuild.github.io/) provider for makensis, compiles NSIS
 
 ## Installation
 
@@ -24,11 +24,19 @@
 
 ### Build
 
-**Build script**  
-<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>b</kbd> (or <kbd>F9</kbd>)
+Here's a reminder of the default shortcuts you can use with this package:
 
-**Toggle build panel**  
-<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>v</kbd> (or <kbd>F8</kbd>)
+**Build script**
+
+<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> or <kbd>F9</kbd>
+
+**Jump to error**
+
+<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>G</kbd> or <kbd>F4</kbd>
+
+**Toggle build panel**
+
+<kbd>Cmd</kbd>+<kbd>Alt</kbd>+<kbd>V</kbd> or <kbd>F8</kbd>
 
 ## License
 
