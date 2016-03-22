@@ -1,7 +1,7 @@
 {
   "name": "build-makensis",
   "version": "0.3.0",
-  "description": "AtomBuild provider for makensis, compiles NSIS",
+  "description": "Atom Build provider for makensis, compiles NSIS",
   "repository": "https://github.com/idleberg/atom-build-makensis",
   "license": "MIT",
   "keywords": [
@@ -14,7 +14,7 @@
   ],
   "main": "lib/makensis.js",
   "engines": {
-    "atom": ">=1.5.0 <2.0.0"
+    "atom": ">=1.0.0 <2.0.0"
   },
   "providedServices": {
     "builder": {
@@ -28,6 +28,9 @@
     "glob": "^7.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^5.0.0",
+    "eslint": "^2.4.0",
+    "eslint-config-atom-build": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-coffeelint": "^0.6.0",
     "gulp-debug": "^2.1.2",
