@@ -24,7 +24,12 @@
 
 ### Build
 
-Before you can build, choose whether you want to *run* your AppleScript or *compile* it to a `.scpt` file. You can do so by choosing your active target from the command palette or by using the shortcut.
+Before you can build, select an active target with your preferred build option.
+
+Available targets:
+
+* `makensis: Compile` — compile *as-is*
+* `makensis: Compile & stop at warnings?` – compile with `/WX` flag
 
 ### Shortcuts
 
