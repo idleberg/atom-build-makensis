@@ -12,7 +12,7 @@
     "windows",
     "installer"
   ],
-  "main": "lib/makensis.js",
+  "main": "lib/provider.js",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
