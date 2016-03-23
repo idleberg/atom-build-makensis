@@ -28,8 +28,8 @@ Before you can build, select an active target with your preferred build option.
 
 Available targets:
 
-* `makensis: Compile` — compile *as-is*
-* `makensis: Compile & stop at warnings?` – compile with `/WX` flag
+* `makensis` — compile *as-is*
+* `makensis /WX` – compile and stop at warnings
 
 ### Shortcuts
 
