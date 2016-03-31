@@ -7,7 +7,9 @@
 
 # build-makensis
 
-[Atom Build](https://atombuild.github.io/) provider for makensis, compiles NSIS
+[Atom Build](https://atombuild.github.io/) provider for makensis, compiles [NSIS](https://nsis.sourceforge.net).
+
+If you're preferred NSIS version is not available on your non-Windows platform, have a look at the separate [build-makensis-wine](https://atom.io/packages/build-makensis-wine) package.
 
 ## Installation
 
