@@ -15,12 +15,25 @@ If you're preferred NSIS version is not available on your non-Windows platform, 
 
 ### apm
 
-* Install package `apm install build-makensis` (or use the GUI)
+Install `build-makensis` from Atom's [Package Manager](http://flight-manual.atom.io/using-atom/sections/atom-packages/) or the command-line equivalent:
+
+`$ apm install build-makensis`
 
 ### GitHub
 
-1. Change directory `cd ~/.atom/packages/`
-2. Clone repository `git clone https://github.com/idleberg/atom-build-makensis build-makensis`
+Change to your Atom packages directory:
+
+```bash
+# Windows
+$ cd %USERPROFILE%\.atom\packages
+
+# Mac OS X & Linux
+$ cd ~/.atom/packages/
+```
+
+Clone repository as `build-makensis`:
+
+`$ git clone https://github.com/idleberg/atom-build-makensis build-makensis`
 
 ## Usage
 
