@@ -1,0 +1,46 @@
+'.source.coffee':
+  'NSIS: Create .atom-build.cson':
+    prefix: 'NSIS: Create .atom-build.cson'
+    body: """
+      name: "${1:${2:file_name}.nsi}"
+      cmd: "makensis"
+      args: [
+          $3"{FILE_ACTIVE}"$4
+      ],
+      sh: ${5:false}
+      cwd: "{FILE_ACTIVE_PATH}"
+      "errorMatch": "(\\\\\\\\((?<r?\\\\\\\\((?<n)(?<message>.+)(\\\\\\\\((?<r?\\\\\\\\((?<n)Error in script \\\\"(?<file>[^\\\\"]+)\\\\" on line (?<line>\\\\\\\\((?<d+) -- aborting creation process",
+      "warningMatch": "[^!]warning: (?<message>.*) \\\\\\\\((?<file>(\\\\\\\\((?<w{1}:)?[^:]+):(?<line>\\\\\\\\((?<d+)\\\\\\\\((?<)"$6
+      $7
+    """
+'.source.json':
+  'NSIS: Create .atom-build.json':
+    prefix: 'NSIS: Create .atom-build.json'
+    body: """
+      {
+        "name": "${1:${2:file_name}.nsi}",
+        "cmd": "makensis",
+        "args": [
+            $3"{FILE_ACTIVE}"$4
+        ],
+        "sh": ${5:false},
+        "cwd": "{FILE_ACTIVE_PATH}",
+        "errorMatch": "(\\\\\\\\((?<r?\\\\\\\\((?<n)(?<message>.+)(\\\\\\\\((?<r?\\\\\\\\((?<n)Error in script \\\\"(?<file>[^\\\\"]+)\\\\" on line (?<line>\\\\\\\\((?<d+) -- aborting creation process",
+        "warningMatch": "[^!]warning: (?<message>.*) \\\\\\\\((?<file>(\\\\\\\\((?<w{1}:)?[^:]+):(?<line>\\\\\\\\((?<d+)\\\\\\\\((?<)"$6
+      }
+      $7
+    """
+'.source.yaml':
+  'NSIS: Create .atom-build.yml':
+    prefix: 'NSIS: Create .atom-build.yml'
+    body: """
+      name: "${1:${2:file_name}.nsi}",
+      cmd: "makensis",
+      args:
+        - $3"{FILE_ACTIVE}"$4
+      sh: ${5:false},
+      cwd: "{FILE_ACTIVE_PATH}",
+      errorMatch: "(\\\\\\\\((?<r?\\\\\\\\((?<n)(?<message>.+)(\\\\\\\\((?<r?\\\\\\\\((?<n)Error in script \\\\"(?<file>[^\\\\"]+)\\\\" on line (?<line>\\\\\\\\((?<d+) -- aborting creation process",
+      warningMatch: "[^!]warning: (?<message>.*) \\\\\\\\((?<file>(\\\\\\\\((?<w{1}:)?[^:]+):(?<line>\\\\\\\\((?<d+)\\\\\\\\((?<)"$6
+      $7
+    """
