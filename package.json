@@ -10,7 +10,9 @@
     "nsis",
     "makensis",
     "windows",
-    "installer"
+    "installer",
+    "linter",
+    "lint"
   ],
   "main": "lib/provider.js",
   "engines": {
