@@ -7,7 +7,7 @@
 [![David](https://img.shields.io/david/dev/idleberg/atom-build-makensis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-build-makensis#info=dependencies)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
 
-[Atom Build](https://atombuild.github.io/) provider for makensis, compiles [NSIS](https://nsis.sourceforge.net). Supports the [linter](https://atom.io/packages/linter) package with a set of error and warning patterns.
+[Atom Build](https://atombuild.github.io/) provider for makensis, compiles [NSIS](https://nsis.sourceforge.net). Supports the [linter](https://atom.io/packages/linter) package for error and warning highlighting.
 
 If you're preferred NSIS version is not available on your non-Windows platform, have a look at the separate [build-makensis-wine](https://atom.io/packages/build-makensis-wine) package.
 
@@ -37,7 +37,9 @@ $ cd ~/.atom/packages/
 
 Clone repository as `build-makensis`:
 
-`$ git clone https://github.com/idleberg/atom-build-makensis build-makensis`
+```bash
+$ git clone https://github.com/idleberg/atom-build-makensis build-makensis
+```
 
 ## Usage
 
