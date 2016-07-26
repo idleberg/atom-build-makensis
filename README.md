@@ -5,7 +5,7 @@
 [![apm](https://img.shields.io/apm/dm/build-makensis.svg?style=flat-square)](https://atom.io/packages/build-makensis)
 [![Travis](https://img.shields.io/travis/idleberg/atom-build-makensis.svg?style=flat-square)](https://travis-ci.org/idleberg/atom-build-makensis)
 [![David](https://img.shields.io/david/idleberg/atom-build-makensis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-build-makensis)
-[![David](https://img.shields.io/david/dev/idleberg/atom-build-makensis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-build-makensis#info=dependencies)
+[![David](https://img.shields.io/david/dev/idleberg/atom-build-makensis.svg?style=flat-square)](https://david-dm.org/idleberg/atom-build-makensis#info=devDependencies)
 [![Gitter](https://img.shields.io/badge/chat-Gitter-ff69b4.svg?style=flat-square)](https://gitter.im/NSIS-Dev/Atom)
 
 [Atom Build](https://atombuild.github.io/) provider for makensis, compiles [NSIS](https://nsis.sourceforge.net). Supports the [linter](https://atom.io/packages/linter) package for error and warning highlighting.
