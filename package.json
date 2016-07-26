@@ -26,6 +26,9 @@
       }
     }
   },
+  "package-deps": [
+    "build"
+  ],
   "dependencies": {
     "atom-package-deps": "^4.0.1"
   },
@@ -41,9 +44,6 @@
     "gulp-lesshint": "^2.0.0",
     "jshint": "^2.9.2"
   },
-  "package-deps": [
-    "build"
-  ],
   "scripts": {
     "test": "gulp lint"
   }
