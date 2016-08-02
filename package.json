@@ -11,6 +11,8 @@
     "makensis",
     "windows",
     "installer",
+    "build tool",
+    "compiler"
     "linter",
     "lint"
   ],
