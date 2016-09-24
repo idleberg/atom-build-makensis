@@ -42,6 +42,13 @@ Clone repository as `build-makensis`:
 $ git clone https://github.com/idleberg/atom-build-makensis build-makensis
 ```
 
+Install Node dependencies:
+
+```bash
+cd build-makensis
+npm install
+```
+
 ## Usage
 
 ### Build
