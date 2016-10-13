@@ -24,7 +24,7 @@ Install `build-makensis` from Atom's [Package Manager](http://flight-manual.atom
 
 `$ apm install build-makensis`
 
-### GitHub
+### Using Git
 
 Change to your Atom packages directory:
 
