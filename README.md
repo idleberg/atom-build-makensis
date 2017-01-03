@@ -14,7 +14,7 @@ If you're preferred NSIS version is not available on your non-Windows platform, 
 
 ![Screenshot](https://raw.githubusercontent.com/idleberg/atom-build-makensis/master/screenshot.png)
 
-*See the linter in action*
+*See the linter in action (the theme is [Hopscotch](https://atom.io/packages/hopscotch))*
 
 ## Installation
 
