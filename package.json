@@ -32,7 +32,7 @@
     "build"
   ],
   "dependencies": {
-    "atom-package-deps": "^4.3.1"
+    "atom-package-deps": "^4.4.1"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
