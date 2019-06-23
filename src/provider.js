@@ -3,7 +3,7 @@
 import { EventEmitter } from 'events';
 import { install } from 'atom-package-deps';
 import { platform } from 'os';
-import { spawnSync } from 'child_process';
+import { spawn } from 'child_process';
 
 // Package settings
 import meta from '../package.json';
@@ -49,6 +49,32 @@ export function satisfyDependencies() {
   });
 }
 
+function spawnPromise(cmd, args, opts) {
+  return new Promise(function (resolve, reject) {
+    Object.assign(opts, {});
+
+    const child = spawn(cmd, args, opts);
+    let stdOut;
+    let stdErr;
+
+    child.stdout.on('data', function (line) {
+      stdOut += line.toString().trim();
+    });
+
+    child.stderr.on('data', function (line) {
+      stdErr += line.toString().trim();
+    });
+
+    child.on('close', function (code) {
+      if (code === 0) {
+        resolve(stdOut);
+      }
+
+      reject(stdErr);
+    });
+  });
+}
+
 export function which() {
   return (platform() === 'win32') ? 'where' : 'which';
 }
@@ -58,24 +84,21 @@ export function provideBuilder() {
     constructor(cwd) {
       super();
       this.cwd = cwd;
-      atom.config.observe('build-makensis.customArguments', () => this.emit('refresh'));
+      atom.config.observe(`${meta.name}.customArguments`, () => this.emit('refresh'));
     }
 
     getNiceName() {
       return 'NSIS';
     }
 
-    isEligible() {
+    async isEligible() {
       if (atom.config.get(`${meta.name}.alwaysEligible`) === true) {
         return true;
       }
 
-      const cmd = spawnSync(which(), ['makensis']);
-      if (!cmd.stdout.toString()) {
-        return false;
-      }
+      const whichCmd = await spawnPromise(which(), ['makensis']);
 
-      return true;
+      return (!whichCmd.stdout.toString()) ? false : true;
     }
 
     settings() {
