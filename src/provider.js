@@ -5,11 +5,11 @@ import { install } from 'atom-package-deps';
 import { platform } from 'os';
 import { spawn } from 'child_process';
 
-// Package settings
 import meta from '../package.json';
 
 const prefix = (platform() === 'win32') ? '/' : '-';
 
+// Package settings
 export const config = {
   customArguments: {
     title: 'Custom Arguments',
@@ -49,11 +49,9 @@ export function satisfyDependencies() {
   });
 }
 
-function spawnPromise(cmd, args, opts) {
+function spawnPromise(cmd, args) {
   return new Promise(function (resolve, reject) {
-    Object.assign(opts, {});
-
-    const child = spawn(cmd, args, opts);
+    const child = spawn(cmd, args);
     let stdOut;
     let stdErr;
 
@@ -98,7 +96,11 @@ export function provideBuilder() {
 
       const whichCmd = await spawnPromise(which(), ['makensis']);
 
-      return (!whichCmd.stdout.toString()) ? false : true;
+      if (whichCmd.stdout && whichCmd.stdout.toString()) {
+        return true;
+      }
+
+      return false;
     }
 
     settings() {
