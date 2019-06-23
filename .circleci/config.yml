@@ -20,6 +20,3 @@ jobs:
       - run:
           name: Linting Source
           command: npm run lint
-      - run:
-          name: Running Tests
-          command: npm run test
