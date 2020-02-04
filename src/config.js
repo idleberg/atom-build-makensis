@@ -4,8 +4,13 @@ export const configSchema = {
   customArguments: {
     title: 'Custom Arguments',
     description: 'Specify your preferred arguments for `makensis`, supports [replacement](https://github.com/noseglid/atom-build#replacement) placeholders',
-    type: 'string',
-    default: '{FILE_ACTIVE}',
+    type: 'array',
+    default: [
+      '{FILE_ACTIVE}'
+    ],
+    items: {
+      type: 'string'
+    },
     order: 0
   },
   manageDependencies: {

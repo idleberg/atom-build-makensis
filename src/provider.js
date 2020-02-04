@@ -44,7 +44,7 @@ export function provideBuilder() {
       const comboMatch = errorMatch.concat(warningMatch);
 
       // User settings
-      const customArguments = getConfig('customArguments').trim().split(' ');
+      const customArguments = getConfig('customArguments');
 
       // Adjust errorMatch and warningMatch
       const customErrorMatch = (customArguments.includes(`${prefix}WX`)) ? comboMatch : errorMatch;
