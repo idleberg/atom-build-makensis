@@ -4,8 +4,9 @@ import meta from '../package.json';
 import { configSchema, getConfig } from './config';
 import { EventEmitter } from 'events';
 import { platform } from 'os';
-import { satisfyDependencies, which } from './util';
+import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import { spawnSync } from 'child_process';
+import { which } from './util';
 
 const prefix = (platform() === 'win32') ? '/' : '-';
 
@@ -90,6 +91,6 @@ export function provideBuilder() {
 // This package depends on build, make sure it's installed
 export async function activate() {
   if (getConfig('manageDependencies') === true) {
-    satisfyDependencies();
+    satisfyDependencies('build-makensis');
   }
 }
