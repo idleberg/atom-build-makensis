@@ -25,6 +25,8 @@ Install `build-makensis` from Atom's [Package Manager](http://flight-manual.atom
 
 ### Using Git
 
+Change to your Atom packages directory:
+
 **Windows**
 
 ```powershell
