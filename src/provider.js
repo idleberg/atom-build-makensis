@@ -1,5 +1,3 @@
-'use babel';
-
 import meta from '../package.json';
 import { configSchema, getConfig } from './config';
 import { EventEmitter } from 'events';
