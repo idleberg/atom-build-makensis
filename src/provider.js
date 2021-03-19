@@ -89,6 +89,6 @@ export function provideBuilder() {
 // This package depends on build, make sure it's installed
 export async function activate() {
   if (getConfig('manageDependencies') === true) {
-    satisfyDependencies('build-makensis');
+    satisfyDependencies(meta.name);
   }
 }
