@@ -1,11 +1,10 @@
-import meta from '../package.json';
 import { configSchema, getConfig } from './config';
 import { EventEmitter } from 'events';
 import { platform } from 'os';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
-import { spawnSync } from 'child_process';
-import { which } from './util';
 import Logger from './log';
+import meta from '../package.json';
+import which from 'which';
 
 const prefix = (platform() === 'win32') ? '/' : '-';
 
@@ -29,9 +28,13 @@ export function provideBuilder() {
         return true;
       }
 
-      const whichCmd = spawnSync(which(), ['makensis']);
+      if (which.sync('makensis', { nothrow: true })) {
+        Logger.log('Build provider is eligible');
+        return true;
+      }
 
-      return whichCmd.stdout?.toString().length ? true : false;
+      Logger.error('Build provider isn\'t eligible');
+      return false;
     }
 
     settings() {
@@ -88,10 +91,15 @@ export function provideBuilder() {
   };
 }
 
-// This package depends on build, make sure it's installed
-export async function activate() {
+export function activate() {
+  Logger.log('Activating package');
+
+  // This package depends on build, make sure it's installed
   if (getConfig('manageDependencies') === true) {
-    Logger.log('Managing dependencies');
     satisfyDependencies(meta.name);
   }
+}
+
+export function deactivate() {
+  Logger.log('Deactivating package');
 }
