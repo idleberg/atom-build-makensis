@@ -5,6 +5,7 @@ import { platform } from 'os';
 import { satisfyDependencies } from 'atom-satisfy-dependencies';
 import { spawnSync } from 'child_process';
 import { which } from './util';
+import Logger from './log';
 
 const prefix = (platform() === 'win32') ? '/' : '-';
 
@@ -24,12 +25,13 @@ export function provideBuilder() {
 
     isEligible() {
       if (getConfig('alwaysEligible') === true) {
+        Logger.log('Always eligible');
         return true;
       }
 
       const whichCmd = spawnSync(which(), ['makensis']);
 
-      return (whichCmd.stdout && whichCmd.stdout.toString().length) ? true : false;
+      return whichCmd.stdout?.toString().length ? true : false;
     }
 
     settings() {
@@ -89,6 +91,7 @@ export function provideBuilder() {
 // This package depends on build, make sure it's installed
 export async function activate() {
   if (getConfig('manageDependencies') === true) {
+    Logger.log('Managing dependencies');
     satisfyDependencies(meta.name);
   }
 }
