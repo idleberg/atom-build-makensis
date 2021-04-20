@@ -20,3 +20,6 @@ jobs:
       - run:
           name: Linting Source
           command: npm run lint
+      - run:
+          name: Build Source
+          command: npm run build
