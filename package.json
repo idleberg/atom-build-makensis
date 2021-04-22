@@ -33,6 +33,9 @@
   "activationHooks": [
     "language-nsis:grammar-used"
   ],
+  "activationHooks": [
+    "core:loaded-shell-environment"
+  ],
   "providedServices": {
     "builder": {
       "description": "Compiles NSIS scripts",
