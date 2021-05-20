@@ -4,8 +4,7 @@
 [![apm](https://flat.badgen.net/apm/v/build-makensis)](https://atom.io/packages/build-makensis)
 [![apm](https://flat.badgen.net/apm/dl/build-makensis)](https://atom.io/packages/build-makensis)
 [![CircleCI](https://flat.badgen.net/circleci/github/idleberg/atom-build-makensis)](https://circleci.com/gh/idleberg/atom-build-makensis)
-[![David](https://flat.badgen.net/david/dep/idleberg/atom-build-makensis)](https://david-dm.org/idleberg/atom-build-makensis)
-[![Gitter](https://flat.badgen.net/badge/chat/on%20gitter/ff69b4)](https://gitter.im/NSIS-Dev/Atom)
+[![David](https://flat.badgen.net/david/dev/idleberg/atom-build-makensis)](https://david-dm.org/idleberg/atom-build-makensis?type=dev)
 
 [Atom Build](https://atombuild.github.io/) provider for makensis, compiles [NSIS](https://nsis.sourceforge.net). Supports the [linter](https://atom.io/packages/linter) package for error and warning highlighting.
 
